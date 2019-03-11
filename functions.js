@@ -31,7 +31,7 @@ profExpW.getElementsByTagName("h3")[0].onclick = function(){
 
 // ----- Content (Coding & Lanuage Experience) ~ Home box hiders. -----
 //	-Solution 1. -
-/*
+/* 
 function showHomePage() {
 	document.getElementById("homePage").style.display = "block";
 }
@@ -93,10 +93,10 @@ document.getElementById("menuHomePage").onclick = function() {
 document.getElementById("menuSkills").onclick = function() {
 	clickOnSkills();
 }
-*/
+ */
 
 // - Solution 2. -
-
+/* 
 function hidePage(page) {	// does the same as the next one.
 	var e = document.getElementById(page);
 	e.style.display = "none";
@@ -138,7 +138,8 @@ document.getElementById("menuSkills").onclick = function() {
 document.getElementById("menuAboutSite").onclick = function() {
 	clickOnAbout();
 }
+ */
+
 // - Solution 3. -
 
-// hide all unneeded pages().
-//  use for or foreach to go through all pages not matching the needed one(s).
+console.info("test");
