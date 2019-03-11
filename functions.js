@@ -143,3 +143,43 @@ document.getElementById("menuAboutSite").onclick = function() {
 // - Solution 3. -
 
 console.info("test");
+
+function hidePage(page) {	// does the same as the next one.
+	var e = document.getElementById(page);
+	e.style.display = "none";
+}
+
+function showPage(page) {	// sets the visibility status of the ID'd object.
+	document.getElementById(page).style.display = "block";
+}
+
+function initializeMenu() {
+	var links = document.querySelectorAll("#top-menuBar a");
+	console.info(links);
+
+	for(var i = 0; i < links.length; i++) {
+		/* console.info("i = ", i);
+		console.warn(links[i]); */
+
+		links[i].onclick = clickMenuItem;	// no "()" after the function name so the browser calls it not "we".
+	}
+}
+
+function clickMenuItem() {
+	console.warn("clicked on menu", this);	// "this" is a variable which was just used.
+												// Here, just clicked on.
+	hideAllPages();
+	var pageId = this.getLinkAttribute("dataPage");
+	console.warn({pageId});
+	showPage(pageId);
+}
+
+function hideAllPages() {
+	var page = document.querySelectorAll(".page");
+	for(var i = 0; i < pages.length; i++) {
+		pages[i].style.display = "none";
+	}
+}
+
+
+initializeMenu();
