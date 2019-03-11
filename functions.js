@@ -169,13 +169,13 @@ function clickMenuItem() {
 	console.warn("clicked on menu", this);	// "this" is a variable which was just used.
 												// Here, just clicked on.
 	hideAllPages();
-	var pageId = this.getLinkAttribute("dataPage");
+	var pageId = this.getAttribute("dataPage");
 	console.warn({pageId});
 	showPage(pageId);
 }
 
 function hideAllPages() {
-	var page = document.querySelectorAll(".page");
+	var pages = document.querySelectorAll(".page");
 	for(var i = 0; i < pages.length; i++) {
 		pages[i].style.display = "none";
 	}
