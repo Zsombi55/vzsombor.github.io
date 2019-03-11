@@ -1,0 +1,147 @@
+
+<!-- This is my first project at FTIT, it is called "My CV".
+    The goal is to create something that looks like a CV or a fancy (or) "LinkedIn-Lite". -->
+<!-- First task: make an base file (index) and write some text in it as simple content. -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Zsombor's CV :)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header>
+    <!--Top bar section, the Header of the site.-->
+    <h2 id="name-image">
+        <img src="en01 _ 255x335.jpg" alt="Beigli with mashed poppy seeds and walnuts."/>
+        <b>Varga Zsombor</b>
+    </h2>
+
+    <h3 id="summary">Current activiy: Web Developer Trainee @ <b>FastTrackIT</b></h3>
+</header>
+
+<body>
+    
+    <div id="top-menuBar"> <!--Top Menu Bar section-->
+        <ul id="menuBar">
+            <li id="menuHomePage"><a href="index.html">Home</a></li> <!--The hashtag sign ("#") also meas "self"page.-->
+            <li id="menuSkills"><a href="#">Skills</a></li>
+            <li id="menuProjects"><a href="https://github.com/Zsombi55" target="_blank">Projects</a></li>
+            <li id="menuAboutSite"><a href="#">About</a></li>
+            <li id="menuContactMe"><a href="index.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="sidebar-left">
+        <div id="eMailMe"> <!--E-mail Me form-->
+            <form id="eMailMeSender" action="">
+                <input type="email" placeholder="Your e-mail address...">
+                <button> Contact Me !</button>
+            </form>
+        </div>
+        
+        <div id="leftBar">
+            <div id="contactInfoW" class="widget"> <!--Contact information-->
+                <h3>Contact Information:</h3>
+                <div id="contactInfoWcontent" class="wContent">
+					<ul> <!--unordered list-->
+						<li>Tel. (mobile): .. I can't remember it :( ..</li>
+						<li>E-mail: zsombi1990@gmail.com</li>
+					</ul>
+				</div>
+            </div>
+
+            <div id="profGoalW" class="widget"> <!--Professional goal / Preferred occupation-->
+                <h3>Professional Goal /</br>
+                    Preferred Occupation:</h3>
+				<div id="profGoalWcontent" class="wContent">
+					<p>Find a company that hires me as a web developer.
+						Preferably to work in their offices, but remorely is also good.</p>
+				</div>
+			</div>
+
+            <div id="profExpW" class="widget"> <!--Professional experience-->
+                <h3>Professional Experience:</h3>
+                <div id="profExpWcontent" class="wContent">
+					<p>Basic forum system for school project, complete with server, database, manager & client views.
+						Using HTML, CSS, Python, Django and PostgreSQL.</p>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <div id="content"> <!--Content section-->
+
+        <div id = "homePage" class = "page" style="display: block;">
+            <h2>Home</h2>
+
+            <p>My name is Varga Zsombor (last/first name). Welcome to my portfolio website.</p>
+            <br\>
+            <p>On the top menu bar the Home and Contact options are redirecting here, at the Skills option you will be 
+                able to see most of my world language and programming related experiences, on the About section you can 
+                read a bit about this site and about myself. The Projects option is a link to my GitHub page where I am  
+                keeping track of my projects for anyone to see.</p>
+        </div>
+
+        <div id="codingPage" class="page" style="display: none"> <!--Coding experience-->
+            <h3>Coding experience:</h3>
+            <ul> <!--unordered list-->
+                <li>Python, IronPython (Python with .NET)</li>
+                <li>Django (Python for web, used like eg. php)</li>
+                <li>MSSQL, PostgreSQL</li>
+                <li>Java</li>
+				<li>C#</li>
+                <li>.NET</li>
+                <li>LUA</li>
+				<li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    
+        <div id="languagePage" class="page" style="display: none"> <!--Language experience-->
+            <h3>Language experience:</h3>
+            <table border="1" width="50%">
+                <tr> <!--table row-->
+                    <td> <!--table line IN row, here, in this case-->
+                        Hungarian
+                    </td>
+                    <td>Native</td>
+                <tr>
+                    <td>Romanian</td>
+                    <td>Advanced (diminished)</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>Native</td>
+                </tr>
+                <tr>
+                    <td>Danish</td>
+                    <td>Advanced</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id = "aboutPage" class = "page" style="display: none;">
+            <h2>About</h2>
+            <p>My first name is Zsombor and my last name is Varga and, this is my first portfolio website.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div>
+        <script>
+            console.info("Good day! :D");    
+        </script>
+        <script src="intro.js"></script> <!--JS Introduction and console test.-->
+		<script src="functions.js"></script>
+    </div>
+
+</body>
+
+<footer class="footer">
+    <a href="http://fasttrackit.org" target="_blank">FastTrackIT homepage.</a>
+</footer>
+
+</html>

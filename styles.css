@@ -1,0 +1,151 @@
+
+/*  selector    {   sub-attribute: value  }
+        p    {   color: red;  }     .. every instce of the sspecific tag.
+        #id_ {   color: red;  }     .. the object with the specific ID.
+        .class {   color: red;  }   .. all objects with the specific class.
+
+        hexadecimal color coding   .. 0 -> 9 -> A -> F .
+        color: #000         .. basic    .. red, green, blue, etc.
+        color: #000+ max x8 .. expanded .. shades and mixes of all variety.
+
+        Distances (border, padding, etc.): top, right, bottom, left.
+*/
+
+body {
+    padding-bottom: 35px;
+    margin: 0;
+    background-color: #cccccc;
+}
+
+header {
+	padding: 5px;    /*  top, right, bottom, left  */
+	min-height: 75px;
+}
+
+#name-image img {
+	width: 50px;
+}
+
+h2 {
+    margin: 5px 0 5px;
+	padding: 5px 40px 0 100px;
+	float: left;
+    width: 500px;
+    text-align: center;
+}
+
+h2 b {
+    vertical-align: 25px;
+}
+
+h3 {
+    margin: 0 0.2em 0; /*  ~= 20%  */
+}
+
+#summary {
+    margin: 0 5px 5px 5px;
+    padding: 40px 40px 0 25px;    /*  top, right, bottom, left  */
+    color: #eb0c5ac9;
+	text-align: right;
+}
+
+#top-menuBar {
+    margin: 8px 0 16px;
+	text-align: center;
+    background-color: #334455;
+    color: #fff;
+}
+
+#menuBar li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#menuBar a {
+    color: white;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#menuBar a:visited {
+    color: #fff;
+}
+
+#menuBar a:hover {
+    color: #334455;
+    background-color: #fff;
+}
+
+#sidebar-left{
+    float: left;
+    width: 300px;
+    padding: 0 0 0 25px;    /*  top, right, bottom, left  */
+}
+
+#leftBar {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#eMailMe {
+	padding: 0 0 5px;    /*  top, right, bottom, left  */
+	margin-bottom: 5px;
+}
+
+.widget {
+	margin-bottom: 4px;
+}
+
+.widget h3 {
+	padding: 3px 0 3px 15px;
+	/*	IF a "background-color" and a generic "background" attribute is used together,
+	the generic has to be first so as to not be covered by the other one !	*/
+	background: #ffa0ae url("icons/toggle-collapse.png") 250px center no-repeat;
+	border-radius: 10px 10px 0 0 ;	/*	Border Corner curvature degree, counted clockwise from top left corner.	*/
+	cursor: pointer;
+
+}
+
+.widget.collapsed .wContent {
+	display: none;
+}
+
+.widget.collapsed h3 {
+	border-radius: 10px;
+	background-image: url("icons/toggle-expand.png");
+}
+
+#content{
+    padding-left: 325px;
+}
+
+#homePage h2, #aboutPage h2 {
+    text-align: left;
+}
+
+.page {
+    background: #fff;
+    margin: 0 5px 5px 5px;
+    padding: 10px;
+    border: 1px solid #d61313;
+}
+
+.page ul {
+    margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgray;
+    margin: 5px 0 0 0 ;
+    padding: 10px 5px 5px 10px;    /*  top, right, bottom, left  */
+    text-align: center;
+}
