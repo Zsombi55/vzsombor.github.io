@@ -166,5 +166,8 @@ function hideAllTmPages() {		// Hide All Top Menu Bar Pages.
 	}
 }
 
+function showPage(page) {	// sets the visibility status of the ID'd object, reveals it.
+	document.getElementById(page).style.display = "block";
+}
 
 initTopMenu();
