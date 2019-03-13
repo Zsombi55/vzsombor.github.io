@@ -151,15 +151,15 @@ function initTopMenu() {	// find all top-menu items  and handle their "onclick" 
 	}
 }
 
-function clickTmItem() {	// click Top Menu Item.
+function clickTmItem() {	// Click Top Menu Item.
 	console.warn("clicked on menu", this);	// "this" is a variable which was just used. Here: just clicked on.
 	hideAllTmPages();
 	var pageId = this.getAttribute("data-page");
 	console.warn({pageId});
-	showPage(pageId);	// NOT MADE !
+	showPage(pageId);
 }
 
-function hideAllTmPages() {		// Hide All Top Menu Bar Pages.
+function hideAllTmPages() {		// Hide All Top Menu Pages.	// sets the visibility status of all ID'd objects, hides them.
 	var pages = document.querySelectorAll(".page");
 	for(var i = 0; i < pages.length; i++) {
 		pages[i].style.display = "none";
