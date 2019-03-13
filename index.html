@@ -26,13 +26,13 @@
     <div id="top-menuBar"> <!--Top Menu Bar section-->
         <ul id="menuBar">
             <!-- <li id="menuHomePage"><a href="index.html">Home</a></li> The hashtag sign ("#") also meas "self" page.-->
-            <li id="menuHomePage"><a href="#" data-page="dataPage">Home</a></li>
-            <li id="menuSkills"><a href="#" data-page="dataPage">Skills</a></li>
+            <li id="menuHomePage"><a href="#" data-page="homePage">Home</a></li> <!--"data-page" points to page IDs-->
+            <li id="menuSkills"><a href="#" data-page="skillsPage">Skills</a></li>
             <!-- <li id="menuProjects"><a href="https://github.com/Zsombi55" target="_blank">Projects</a></li> -->
-            <li id="menuProjects"><a href="#" data-page="dataPage">Projects</a></li>
-            <li id="menuAboutSite"><a href="#" data-page="dataPage">About</a></li>
+            <li id="menuProjects"><a href="#" data-page="projectsPage">Projects</a></li>
+            <li id="menuAboutSite"><a href="#" data-page="aboutPage">About</a></li>
              <!-- <li id="menuContactMe"><a href="index.html">Contact</a></li> -->
-            <li id="menuContactMe"><a href="#" data-page="dataPage">Contact</a></li>
+            <li id="menuContactMe"><a href="#" data-page="contactPage">Contact</a></li>
         </ul>
     </div>
 
@@ -128,9 +128,22 @@
 			</div>
 		</div>
 
+		<div id = "projectsPage" class = "page" style="display: none;">
+            <h3>Projects</h3>
+            <p>All my publicly available projects can be found on 
+				<a href="https://github.com/Zsombi55" target="_blank">GitHub</a>.
+			</p>
+        </div>
+		
         <div id = "aboutPage" class = "page" style="display: none;">
             <h3>About</h3>
             <p>My first name is Zsombor and my last name is Varga and, this is my first portfolio website.</p>
+        </div>
+		
+		<div id = "contactPage" class = "page" style="display: none;">
+            <h3>Contact</h3>
+            <p>My e-mail address is "zsombi1990@gmail.com".</p>
+			<!--	TO DO :: add simple on-site e-mail--me form.	-->
         </div>
     </div>
 

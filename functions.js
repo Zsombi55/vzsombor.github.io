@@ -147,19 +147,19 @@ function initTopMenu() {	// find all top-menu items  and handle their "onclick" 
 	console.info(links);
 
 	for(var i = 0; i < links.length; i++) {
-		links[i].onclick = clickMenuItem;	// no "()" after the function name so the browser calls it not us.
+		links[i].onclick = clickTmItem;	// no "()" after the function name so the browser calls it not us.
 	}
 }
 
-function clickTopMenuItem() {
+function clickTmItem() {	// click Top Menu Item.
 	console.warn("clicked on menu", this);	// "this" is a variable which was just used. Here: just clicked on.
-	hideAllPages();
-	var pageId = this.getAttribute("dataPage");
+	hideAllTmPages();
+	var pageId = this.getAttribute("data-page");
 	console.warn({pageId});
-	showPage(pageId);
+	showPage(pageId);	// NOT MADE !
 }
 
-function hideAllPages() {
+function hideAllTmPages() {		// Hide All Top Menu Bar Pages.
 	var pages = document.querySelectorAll(".page");
 	for(var i = 0; i < pages.length; i++) {
 		pages[i].style.display = "none";
