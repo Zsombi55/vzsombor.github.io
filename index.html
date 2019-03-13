@@ -26,13 +26,13 @@
     <div id="top-menuBar"> <!--Top Menu Bar section-->
         <ul id="menuBar">
             <!-- <li id="menuHomePage"><a href="index.html">Home</a></li> The hashtag sign ("#") also meas "self" page.-->
-            <li id="menuHomePage"><a href="#" data-page="daaPage">Home</a></li>
-            <li id="menuSkills"><a href="#" data-page="daaPage">Skills</a></li>
+            <li id="menuHomePage"><a href="#" data-page="dataPage">Home</a></li>
+            <li id="menuSkills"><a href="#" data-page="dataPage">Skills</a></li>
             <!-- <li id="menuProjects"><a href="https://github.com/Zsombi55" target="_blank">Projects</a></li> -->
-            <li id="menuProjects"><a href="#" data-page="daaPage">Projects</a></li>
-            <li id="menuAboutSite"><a href="#" data-page="daaPage">About</a></li>
+            <li id="menuProjects"><a href="#" data-page="dataPage">Projects</a></li>
+            <li id="menuAboutSite"><a href="#" data-page="dataPage">About</a></li>
              <!-- <li id="menuContactMe"><a href="index.html">Contact</a></li> -->
-            <li id="menuContactMe"><a href="#" data-page="daaPage">Contact</a></li>
+            <li id="menuContactMe"><a href="#" data-page="dataPage">Contact</a></li>
         </ul>
     </div>
 
@@ -87,44 +87,46 @@
                 keeping track of my projects for anyone to see.</p>
         </div>
 
-        <div id="codingPage" class="page" style="display: none"> <!--Coding experience-->
-            <h3>Coding experience:</h3>
-            <ul> <!--unordered list-->
-                <li>Python, IronPython (Python with .NET)</li>
-                <li>Django (Python for web, used like eg. php)</li>
-                <li>MSSQL, PostgreSQL</li>
-                <li>Java</li>
-				<li>C#</li>
-                <li>.NET</li>
-                <li>LUA</li>
-				<li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    
-        <div id="languagePage" class="page" style="display: none"> <!--Language experience-->
-            <h3>Language experience:</h3>
-            <table border="1" width="50%">
-                <tr> <!--table row-->
-                    <td> <!--table line IN row, here, in this case-->
-                        Hungarian
-                    </td>
-                    <td>Native</td>
-                <tr>
-                    <td>Romanian</td>
-                    <td>Advanced (diminished, unused for 7 years)</td>
-                </tr>
-                <tr>
-                    <td>English</td>
-                    <td>Native (learned)</td>
-                </tr>
-                <tr>
-                    <td>Danish</td>
-                    <td>Advanced</td>
-                </tr>
-            </table>
-        </div>
+		<div id="skillsPage" class="page" style="display: none">
+			<div id="codingPage" class="skillsPage"> <!--style="display: none"> Coding experience-->
+				<h3>Coding experience:</h3>
+				<ul> <!--unordered list-->
+					<li>Python, IronPython (Python with .NET)</li>
+					<li>Django (Python for web, used like eg. php)</li>
+					<li>MSSQL, PostgreSQL</li>
+					<li>Java</li>
+					<li>C#</li>
+					<li>.NET</li>
+					<li>LUA</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+				</ul>
+			</div>
+		
+			<div id="languagePage" class="skillsPage"> <!--style="display: none"> Language experience-->
+				<h3>Language experience:</h3>
+				<table border="1" width="50%">
+					<tr> <!--table row-->
+						<td> <!--table line IN row, here, in this case-->
+							Hungarian
+						</td>
+						<td>Native</td>
+					<tr>
+						<td>Romanian</td>
+						<td>Advanced (diminished, unused for 7 years)</td>
+					</tr>
+					<tr>
+						<td>English</td>
+						<td>Native (learned)</td>
+					</tr>
+					<tr>
+						<td>Danish</td>
+						<td>Advanced</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 
         <div id = "aboutPage" class = "page" style="display: none;">
             <h3>About</h3>

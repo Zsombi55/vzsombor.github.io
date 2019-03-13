@@ -97,12 +97,12 @@ document.getElementById("menuSkills").onclick = function() {
 
 // - Solution 2. -
 /* 
-function hidePage(page) {	// does the same as the next one.
+function hidePage(page) {	// sets the visibility status of the ID'd object, hides it.
 	var e = document.getElementById(page);
 	e.style.display = "none";
 }
 
-function showPage(page) {	// sets the visibility status of the ID'd object.
+function showPage(page) {	// sets the visibility status of the ID'd object, reveals it.
 	document.getElementById(page).style.display = "block";
 }
 
@@ -142,32 +142,17 @@ document.getElementById("menuAboutSite").onclick = function() {
 
 // - Solution 3. -
 
-console.info("test");
-
-function hidePage(page) {	// does the same as the next one.
-	var e = document.getElementById(page);
-	e.style.display = "none";
-}
-
-function showPage(page) {	// sets the visibility status of the ID'd object.
-	document.getElementById(page).style.display = "block";
-}
-
-function initializeMenu() {
+function initTopMenu() {	// find all top-menu items  and handle their "onclick" events.
 	var links = document.querySelectorAll("#top-menuBar a");
 	console.info(links);
 
 	for(var i = 0; i < links.length; i++) {
-		/* console.info("i = ", i);
-		console.warn(links[i]); */
-
-		links[i].onclick = clickMenuItem;	// no "()" after the function name so the browser calls it not "we".
+		links[i].onclick = clickMenuItem;	// no "()" after the function name so the browser calls it not us.
 	}
 }
 
-function clickMenuItem() {
-	console.warn("clicked on menu", this);	// "this" is a variable which was just used.
-												// Here, just clicked on.
+function clickTopMenuItem() {
+	console.warn("clicked on menu", this);	// "this" is a variable which was just used. Here: just clicked on.
 	hideAllPages();
 	var pageId = this.getAttribute("dataPage");
 	console.warn({pageId});
@@ -182,4 +167,4 @@ function hideAllPages() {
 }
 
 
-initializeMenu();
+initTopMenu();

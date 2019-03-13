@@ -123,18 +123,25 @@ h3 {
     padding-left: 325px;
 }
 
-#homePage h2, #aboutPage h2 {
-    text-align: left;
-}
-
-.page {
+#homePage, #aoutPage {
     background: #fff;
     margin: 0 5px 5px 5px;
     padding: 10px;
     border: 1px solid #d61313;
 }
 
-.page ul {
+#homePage h2, #aboutPage h2 {
+    text-align: left;
+}
+
+.skillsPage {
+	background: #fff;
+    margin: 0 5px 5px 5px;
+    padding: 10px;
+    border: 1px solid #d61313;
+}
+
+.skillsPage ul {
     margin-top: 8px;
 	margin-bottom: 8px;
 }
