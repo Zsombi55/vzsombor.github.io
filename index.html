@@ -135,9 +135,7 @@
 		
 		<div id = "contactPage" class = "page" style="display: none;">
             <h3>Contact</h3>
-            <p>My e-mail address is "zsombi1990@gmail.com".</p>
-			
-			<div id="eMailMe"> <!--E-mail Me form-->
+            <div id="eMailMe"> <!--E-mail Me form-->
 				<form id="eMailMeSender" action="/eMailFormHandler" method="post">
 					<div id="nameBox">
 						<label for="senderName">Name:</label>
@@ -149,12 +147,17 @@
 						<input type="email" id="sendAddress" name="userAddress" placeholder="Your e-mail address">
 					</div>
 					
-					<div id="messageBox">
-						<label for="userMessage">The Message:</label>
-						<textarea type="email" id="userMsg" name="userMaessage" placeholder="Your message..."></textarea>
+					<div id="subjectBox">
+						<label for="messageSubject">Subject:</label>
+						<input type="text" id="msgSubject" name="messageSubject" placeholder="Message subject or topic...">
 					</div>
 					
-					<div id="sendButton">
+					<div id="messageBox">
+						<label for="userMessage">Write Your Message:</label>
+						<textarea type="email" id="userMsg" name="userMessage" placeholder="Your message..."></textarea>
+					</div>
+					
+					<div id="sendButton" class="submitButton">
 						<button type="submit" id="sendBtn">Send message</button>
 					</div>
 				</form>

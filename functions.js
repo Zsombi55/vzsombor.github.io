@@ -189,4 +189,5 @@ var browserCStyle = [
     , "font-weight: bold"
 ].join(';');
 
-console.log("%c The \"eMailMeButton\" is not yet funtional! Contact form building in progress..", browserCStyle);
+console.log("%c Contact page: form & \"Send message\" button is not yet funtional! " + 
+	"Waiting for server side e-mail form scripting lesson..", browserCStyle);
