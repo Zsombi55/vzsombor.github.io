@@ -138,10 +138,29 @@
             <p>My e-mail address is "zsombi1990@gmail.com".</p>
 			
 			<div id="eMailMe"> <!--E-mail Me form-->
-            <form id="eMailMeSender" action="">
-                <input type="email" id="eMailMeButton" placeholder="Your e-mail address...">
-                <button> Contact Me !</button>
-            </form>
+				<form id="eMailMeSender" action="/eMailFormHandler" method="post">
+					<div id="nameBox">
+						<label for="senderName">Name:</label>
+						<input type="text" id="sendName" name="userName" placeholder="Your Name">
+					</div>
+					
+					<div id="addressBox">
+						<label for="senderAddress">E-mail Address:</label>
+						<input type="email" id="sendAddress" name="userAddress" placeholder="Your e-mail address">
+					</div>
+					
+					<div id="messageBox">
+						<label for="userMessage">The Message:</label>
+						<textarea type="email" id="userMsg" name="userMaessage" placeholder="Your message..."></textarea>
+					</div>
+					
+					<div id="sendButton">
+						<button type="submit" id="sendBtn">Send message</button>
+					</div>
+				</form>
+			</div>
+			
+			
         </div>
 			<!--	TO DO :: add simple on-site e-mail--me form.	-->
         </div>

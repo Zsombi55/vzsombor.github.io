@@ -174,6 +174,8 @@ initTopMenu();
 
 // ----- E-mail form. -----
 
+// ...
+
 // -----  Colorful Browser Console Message -----
 var browserCStyle = [
     "background: linear-gradient(#D33106, #571402)"
