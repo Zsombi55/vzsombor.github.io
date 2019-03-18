@@ -91,9 +91,59 @@ h3 {
 	margin-bottom: 10px;
 }
 
+#contactPage h3 {
+    float: left;
+}
+
 #eMailMe {
 	padding: 0 0 5px;    /*  top, right, bottom, left  */
 	margin-bottom: 5px;
+}
+
+#eMailMe div {
+	padding: 5px 5px 5px 5px;
+}
+
+#eMailMeSender {
+	margin: 0 auto;		/*	Just to center the form on the page.	*/
+	width: 400px;
+	padding: 1em;	/*	To see the outline of the form.	*/
+	border: 1px solid #ccc;
+	border-radius: 1em;
+}
+
+#eMailMeSender div + div {		/*	" Tag + tag " means that this allpies only to consecutive same type tags.	*/
+	margin-top: 1em;
+}
+
+#eMailMeSender label {
+	display: inline-block;
+	width: 150px;
+	padding-left: 20px;
+}
+
+#eMailMeSender textarea {
+	vertical-align: top;
+	height: 5em;	/*	Input space.	*/
+}
+
+#eMailMeSender input, textarea {
+	font: 1em sans-serif;
+	width: 300px;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+#eMailMeSender input:focus, textarea:focus {
+	border-color: #000;		/*	Border coloring when selected to differentiate from the rest.	*/
+}
+
+#eMailMeSender .submitButton {
+	padding-left: 90px;
+}
+
+#eMailMeSender button {
+	margin-left: .5em;	/*	Roughly the same space as between the labels and their text fields.	*/
 }
 
 .widget {
@@ -123,18 +173,25 @@ h3 {
     padding-left: 325px;
 }
 
-#homePage h2, #aboutPage h2 {
-    text-align: left;
-}
-
-.page {
+#homePage, #projectsPage, #aboutPage, #contactPage {
     background: #fff;
     margin: 0 5px 5px 5px;
     padding: 10px;
     border: 1px solid #d61313;
 }
 
-.page ul {
+#homePage h2, #aboutPage h2 {
+    text-align: left;
+}
+
+.skillsPage {
+	background: #fff;
+    margin: 0 5px 5px 5px;
+    padding: 10px;
+    border: 1px solid #d61313;
+}
+
+.skillsPage ul {
     margin-top: 8px;
 	margin-bottom: 8px;
 }

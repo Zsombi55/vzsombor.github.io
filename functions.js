@@ -97,12 +97,12 @@ document.getElementById("menuSkills").onclick = function() {
 
 // - Solution 2. -
 /* 
-function hidePage(page) {	// does the same as the next one.
+function hidePage(page) {	// sets the visibility status of the ID'd object, hides it.
 	var e = document.getElementById(page);
 	e.style.display = "none";
 }
 
-function showPage(page) {	// sets the visibility status of the ID'd object.
+function showPage(page) {	// sets the visibility status of the ID'd object, reveals it.
 	document.getElementById(page).style.display = "block";
 }
 
@@ -142,44 +142,52 @@ document.getElementById("menuAboutSite").onclick = function() {
 
 // - Solution 3. -
 
-console.info("test");
-
-function hidePage(page) {	// does the same as the next one.
-	var e = document.getElementById(page);
-	e.style.display = "none";
-}
-
-function showPage(page) {	// sets the visibility status of the ID'd object.
-	document.getElementById(page).style.display = "block";
-}
-
-function initializeMenu() {
+function initTopMenu() {	// find all top-menu items  and handle their "onclick" events.
 	var links = document.querySelectorAll("#top-menuBar a");
 	console.info(links);
 
 	for(var i = 0; i < links.length; i++) {
-		/* console.info("i = ", i);
-		console.warn(links[i]); */
-
-		links[i].onclick = clickMenuItem;	// no "()" after the function name so the browser calls it not "we".
+		links[i].onclick = clickTmItem;	// no "()" after the function name so the browser calls it not us.
 	}
 }
 
-function clickMenuItem() {
-	console.warn("clicked on menu", this);	// "this" is a variable which was just used.
-												// Here, just clicked on.
-	hideAllPages();
-	var pageId = this.getAttribute("dataPage");
+function clickTmItem() {	// Click Top Menu Item.
+	console.warn("clicked on menu", this);	// "this" is a variable which was just used. Here: just clicked on.
+	hideAllTmPages();
+	var pageId = this.getAttribute("data-page");
 	console.warn({pageId});
 	showPage(pageId);
 }
 
-function hideAllPages() {
+function hideAllTmPages() {		// Hide All Top Menu Pages.	// sets the visibility status of all ID'd objects, hides them.
 	var pages = document.querySelectorAll(".page");
 	for(var i = 0; i < pages.length; i++) {
 		pages[i].style.display = "none";
 	}
 }
 
+function showPage(page) {	// sets the visibility status of the ID'd object, reveals it.
+	document.getElementById(page).style.display = "block";
+}
 
-initializeMenu();
+initTopMenu();
+
+// ----- E-mail form. -----
+
+// ...
+
+// -----  Colorful Browser Console Message -----
+var browserCStyle = [
+    "background: linear-gradient(#D33106, #571402)"
+    , "border: 1px solid #3E0E02"
+    , "color: white"
+    , "display: block"
+    , "text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)"
+    , "box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 5px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 5px -10px rgba(255, 255, 255, 0.4) inset"
+    , "line-height: 40px"
+    , "text-align: center"
+    , "font-weight: bold"
+].join(';');
+
+console.log("%c Contact page: form & \"Send message\" button is not yet funtional! " + 
+	"Waiting for server side e-mail form scripting lesson..", browserCStyle);
