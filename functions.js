@@ -206,8 +206,21 @@ function showSkills_B() {
 	}
 }
 
-showSkills_A();
-showSkills_B();
+// - Solution 3 -
+function showSkills_C() {
+	var skills = ["html", "css", "js"];
+	console.warn("showSkills", skills);
+
+	function printSkill(skill, index) {
+		console.info("# " + (index + 1) + " " + skill);	// "i+1" has to be in parentheses or they behave like strings.
+	}
+
+	skills.forEach(printSkill);
+}
+
+showSkills_A();		// - Solution 1 -
+showSkills_B();		// - Solution 2 -
+showSkills_C();		// - Solution 3 -
 
 // ----- E-mail form. -----
 // ...
