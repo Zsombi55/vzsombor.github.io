@@ -190,36 +190,53 @@ initTopMenu();
 
 // ----- Skills' page dynamic unordered list listing -----
 // - Solution 1 -
-/* function showSkills_A() {
+/* 
+	function showSkills_A() {
 	var skills = ["html", "css", "js"];
 	for(var i =0; i < skills.length; i++) {
 		console.info(i+1 + ". " + skills[i]);
 	}
-} */
+}
+ */
 
 // - Solution 2 -
-/* function showSkills_B() {
+/*
+	function showSkills_B() {
 	var skills = ["html", "css", "js"];
 	console.warn("showSkills", skills);
 	for(var i =0; i < skills.length; i++) {
 		console.info("# " + (i+1) + " " + skills[i]);	// "i+1" has to be in parentheses or they behave like strings.
 	}
-} */
+}
+ */
 
 // - Solution 3 -
+/* 
 function showSkills() {
 	var skills = ["html", "css", "js"];
 	console.warn("showSkills", skills);
+	
+	skills.forEach(printSkill);
 
 	function printSkill(skill, index) {
 		console.info("# " + (index + 1) + " " + skill);	// "i+1" has to be in parentheses or they behave like strings.
 	}
+}
+ */
 
+// - Solution 4 -
+function showSkills() {
+	var skills = ["html", "css", "js"];
+	console.warn("showSkills", skills);
+	
 	skills.forEach(printSkill);
+
+	function printSkill(skill, index) {
+		console.info("# " + (index + 1) + " " + skill);	// "i+1" has to be in parentheses or they behave like strings.
+	}
 }
 
 showSkills();
-
 
 // ----- E-mail form. -----
 // ...
