@@ -173,7 +173,6 @@ function showPage(page) {	// sets the visibility status of the ID'd object, reve
 initTopMenu();
 
 // ----- E-mail form. -----
-
 // ...
 
 // -----  Colorful Browser Console Message -----
@@ -189,5 +188,5 @@ var browserCStyle = [
     , "font-weight: bold"
 ].join(';');
 
-console.log("%c Contact page: form & \"Send message\" button is not yet funtional! " + 
+console.log("%c Contact page: form & \"Send message\" button is not yet functional! " + 
 	"Waiting for server side e-mail form scripting lesson..", browserCStyle);
