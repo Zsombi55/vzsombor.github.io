@@ -232,7 +232,7 @@ function showSkills() {
 		return "<li>" + skill + "</li>";	// not using ".toUpperCase()" .. better to be punctual !!
 	});
 
-	var ul = document.querySelector("#codingPage ul");
+	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
 	ul.innerHTML = htmlSkills.join("");
 }
 
