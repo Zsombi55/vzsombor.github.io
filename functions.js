@@ -226,7 +226,10 @@ function showSkills() {
 
 // - Solution 4 -
 function showSkills() {
-	var skills = ["html", "css", "js", "funny"];	// --TO DO insert the actual list elements into the list!
+	var skills = ["Python, IronPython (Python with .NET)",
+				"Django (Python for web, used like eg. PHP)",
+				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
+				"HTML", "CSS", "JavaScript"];
 	// NEXT :: put this array into a separate file of its own.
 	//		filters for categories so only the selected category's are seen.
 
