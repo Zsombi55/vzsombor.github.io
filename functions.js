@@ -226,12 +226,14 @@ function showSkills() {
 
 // - Solution 4 -
 function showSkills() {
-	var skills = ["html", "css", "js"];
-	console.warn("showSkills", skills);
+	var skills = ["html", "css", "js", "funny"];	// --TO DO insert the actual list elements into the list!
 	
-	skills.forEach( function (skill, index) {
-		console.info("# " + (index + 1) + " " + skill);	// "i+1" has to be in parentheses or they behave like strings.
+	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
+		return "<li>" + skill + "</li>";	// not using ".toUpperCase()" .. better to be punctual !!
 	});
+
+	var ul = document.querySelector("#codingPage ul");
+	ul.innerHTML = htmlSkills.join("");
 }
 
 showSkills();
