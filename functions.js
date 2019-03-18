@@ -227,7 +227,9 @@ function showSkills() {
 // - Solution 4 -
 function showSkills() {
 	var skills = ["html", "css", "js", "funny"];	// --TO DO insert the actual list elements into the list!
-	
+	// NEXT :: put this array into a separate file of its own.
+	//		filters for categories so only the selected category's are seen.
+
 	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
 		return "<li>" + skill + "</li>";	// not using ".toUpperCase()" .. better to be punctual !!
 	});
