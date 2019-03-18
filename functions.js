@@ -188,16 +188,26 @@ function showPage(page) {	// sets the visibility status of the ID'd object, reve
 
 initTopMenu();
 
-// ----- Skills' page unordered list dynamically list in ordered form -----
-function showSkills() {
+// ----- Skills' page dynamic unordered list listing -----
+// - Solution 1 -
+function showSkills_A() {
 	var skills = ["html", "css", "js"];
-	for(var i = 0; i < skills.length; i++) {
+	for(var i =0; i < skills.length; i++) {
 		console.info(i+1 + ". " + skills[i]);
 	}
 }
 
-showSkills();
+// - Solution 2 -
+function showSkills_B() {
+	var skills = ["html", "css", "js"];
+	console.warn("showSkills", skills);
+	for(var i =0; i < skills.length; i++) {
+		console.info("# " + (i+1) + " " + skills[i]);	// "i+1" has to be in parentheses or they behave like strings.
+	}
+}
+
+showSkills_A();
+showSkills_B();
 
 // ----- E-mail form. -----
 // ...
-
