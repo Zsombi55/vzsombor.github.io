@@ -226,18 +226,26 @@ function showSkills() {
 
 // - Solution 4 -
 function showSkills() {
-	var allEndorsements = [8, 19, 20];		// test amount.
+	/* var allEndorsements = [8, 19, 20, 3];
 	var skills = ["Python, IronPython (Python with .NET)",
 				"Django (Python for web, used like eg. PHP)",
 				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
-				"HTML", "CSS", "JavaScript"];
+				"HTML", "CSS", "JavaScript", "NodeJS ?"]; */
+	
+	var skills = [		// My first json code!  :D
+		{name: "HTML", endorsements: 5}, 
+		{name: "CSS", endorsements: 1}, 
+		{name: "JavaScript", endorsements: 9}, 
+		{name: "nodeJS", endorsements: 3}
+	];
 	
 	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
-		// var endorsements = " (" + allEndorsements[index] + ")";	// dynamic endoresements - Solution 1 -
+		console.warn("Wo are you? ");
 		var endorsements = " <span class=\"endoresement\">(" +
-								 allEndorsements[index] +
-							 ")</span>";	// - Solution 2 -
-		return "<li>" + skill + (endorsements) + "</li>";	// without ".toUpperCase()" .. be punctual !!
+							 skills + endorsements +
+							 ")</span>";
+		return "<li>" + skills[index].name + " " +
+				 " (" + skills[index].endorsements + ")" + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
