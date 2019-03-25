@@ -262,8 +262,8 @@ function showSkills(skills) {
 }
 
 // --- Start at desired page for testing purposes.
-hideAllTmPages();
-showPage("skillsPage");
+/* hideAllTmPages();
+showPage("skillsPage"); */
 
 // ----- Load "skills.json"and pass here.
 console.log("1. Before loading.");
