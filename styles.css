@@ -69,12 +69,12 @@ h3 {
     display: inline-block;
 }
 
-#menuBar a:visited {	/* "a:hover" MUST come after "a:link" and "a:visited", "a:active" MUST come after "a:hover" */
+/* #menuBar a:visited {
     color: #fff;
 	background-color: red;
-}
+} */
 
-#menuBar a:hover {
+#menuBar a:hover {	/* "a:hover" MUST come after "a:link" and "a:visited", "a:active" MUST come after "a:hover" */
     color: #334455;
     background-color: #fff;
 	cursor: pointer;

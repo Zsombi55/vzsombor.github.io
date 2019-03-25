@@ -233,19 +233,29 @@ function showSkills() {
 				"HTML", "CSS", "JavaScript", "NodeJS ?"]; */
 	
 	var skills = [		// My first json code!  :D
-		{name: "HTML", endorsements: 5}, 
-		{name: "CSS", endorsements: 1}, 
-		{name: "JavaScript", endorsements: 9}, 
-		{name: "nodeJS", endorsements: 3}
+		{name: "HTML", endorsements: 5, endorsedBy: "Andrei I"}, 
+		{name: "CSS", endorsements: 1, endorsedBy: null}, 
+		{name: "JavaScript", endorsements: 9, endorsedBy: "Vasile I"}, 
+		{name: "nodeJS", endorsements: 3, endorsedBy: null}
 	];
 	
+	skills.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
+		var nameA = a.name.toLowerCase();
+		var nameB = b.name.toLowerCase();
+		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
+	});
+
 	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
-		console.warn("Wo are you? ");
-		var endorsements = " <span class=\"endoresement\">(" +
-							 skills + endorsements +
-							 ")</span>";
-		return "<li>" + skills[index].name + " " +
-				 " (" + skills[index].endorsements + ")" + "</li>";	// without ".toUpperCase()" .. be punctual !!
+		var endorsements = ` <span class="endorsement">(
+			${skill.endorsements}
+			${endorsedBy}
+		)</span>`;	// " `` " string template wrappers.
+		
+		var endorsedBy = true ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
+
+		return "<li>" + skills[index].name +
+						 endorsements +
+						 endorsedBy + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
