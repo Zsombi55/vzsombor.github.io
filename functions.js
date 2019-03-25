@@ -273,10 +273,10 @@ fetch("data/skills.json")
 		return response.json();
 	})
 	.then(function(skills) {
-		console.log("3 skills", skills);
+		console.log("3. Loading skills.", skills);
 		showSkills(skills);
 	});
-console.log("3. After loading.");
+console.log("4. After loading.");
 
 // ----- E-mail form. -----
 // ...
