@@ -231,12 +231,12 @@ function showSkills(skills) {
 				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
 				"HTML", "CSS", "JavaScript", "NodeJS ?"]; */
 	
-	var skills = [		// My first json code!  :D
+	/* var skills = [		// My first json code!  :D
 		{name: "HTML", endorsements: 5, endorsedBy: "Andrei I"}, 
 		{name: "CSS", endorsements: 1, endorsedBy: null}, 
 		{name: "JavaScript", endorsements: 9, endorsedBy: "Vasile I"}, 
 		{name: "nodeJS", endorsements: 3, endorsedBy: null}
-	];
+	]; */
 	
 	//var skills = [];
 
@@ -265,8 +265,18 @@ function showSkills(skills) {
 hideAllTmPages();
 showPage("skillsPage");
 
-//showSkills([{name: "Test", endorsements: 1}]);	// Load "skills.json"and pass here.
+// ----- Load "skills.json"and pass here.
+console.log("1. Before loading.");
+fetch("data/skills.json")
+	.then(function(response) {
+		console.log("2. Loaded: skills.json");
+		return response.json();
+	})
+	.then(function(skills) {
+		console.log("3 skills", skills);
+		showSkills(skills);
+	});
+console.log("3. After loading.");
 
-showSkills();
 // ----- E-mail form. -----
 // ...
