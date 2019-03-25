@@ -1,6 +1,7 @@
+
 [
-    {name: "HTML", endorsements: 5, endorsedBy: "Andrei I"}, 
-	{name: "CSS", endorsements: 1, endorsedBy: null}, 
-	{name: "JavaScript", endorsements: 9, endorsedBy: "Vasile I"}, 
-	{name: "nodeJS", endorsements: 3, endorsedBy: null}
+    {"name": "HTML", "endorsements": 5, "endorsedBy": "Andrei I"}, 
+	{"name": "CSS", "endorsements": 1, "endorsedBy": null}, 
+	{"name": "JavaScript", "endorsements": 9, "endorsedBy": "Vasile I"}, 
+	{"name": "nodeJS", "endorsements": 3, "endorsedBy": null}
 ]

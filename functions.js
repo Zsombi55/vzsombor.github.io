@@ -224,10 +224,9 @@ function showSkills() {
 }
  */
 
-// - Solution 4 -
-function showSkills() {
-	/* var allEndorsements = [8, 19, 20, 3];
-	var skills = ["Python, IronPython (Python with .NET)",
+// - Solution 4 , expanded with the endorsement functions -
+function showSkills(skills) {
+	/* var skills = ["Python, IronPython (Python with .NET)",
 				"Django (Python for web, used like eg. PHP)",
 				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
 				"HTML", "CSS", "JavaScript", "NodeJS ?"]; */
@@ -239,6 +238,8 @@ function showSkills() {
 		{name: "nodeJS", endorsements: 3, endorsedBy: null}
 	];
 	
+	//var skills = [];
+
 	skills.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
 		var nameA = a.name.toLowerCase();
 		var nameB = b.name.toLowerCase();
@@ -246,16 +247,14 @@ function showSkills() {
 	});
 
 	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
+		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
+		
 		var endorsements = ` <span class="endorsement">(
 			${skill.endorsements}
 			${endorsedBy}
 		)</span>`;	// " `` " string template wrappers.
 		
-		var endorsedBy = true ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
-
-		return "<li>" + skills[index].name +
-						 endorsements +
-						 endorsedBy + "</li>";	// without ".toUpperCase()" .. be punctual !!
+		return "<li>" + skills[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
@@ -266,7 +265,8 @@ function showSkills() {
 hideAllTmPages();
 showPage("skillsPage");
 
-showSkills();
+//showSkills([{name: "Test", endorsements: 1}]);	// Load "skills.json"and pass here.
 
+showSkills();
 // ----- E-mail form. -----
 // ...
