@@ -226,20 +226,27 @@ function showSkills() {
 
 // - Solution 4 -
 function showSkills() {
+	var allEndorsements = [8, 19, 20];		// test amount.
 	var skills = ["Python, IronPython (Python with .NET)",
 				"Django (Python for web, used like eg. PHP)",
 				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
 				"HTML", "CSS", "JavaScript"];
-	// NEXT :: put this array into a separate file of its own.
-	//		filters for categories so only the selected category's are seen.
-
+	
 	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
-		return "<li>" + skill + "</li>";	// not using ".toUpperCase()" .. better to be punctual !!
+		// var endorsements = " (" + allEndorsements[index] + ")";	// dynamic endoresements - Solution 1 -
+		var endorsements = " <span class=\"endoresement\">(" +
+								 allEndorsements[index] +
+							 ")</span>";	// - Solution 2 -
+		return "<li>" + skill + (endorsements) + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
 	ul.innerHTML = htmlSkills.join("");
 }
+
+// --- Start at desired page for testing purposes.
+hideAllTmPages();
+showPage("skillsPage");
 
 showSkills();
 
