@@ -226,10 +226,6 @@ function showSkills() {
 
 // - Solution 4 , expanded with the endorsement functions -
 function showSkills(skills) {
-	/* var skills = ["Python, IronPython (Python with .NET)",
-				"Django (Python for web, used like eg. PHP)",
-				"MSSQL, PostgreSQL", "Java", "C#", ".NET", "Lua",
-				"HTML", "CSS", "JavaScript", "NodeJS ?"]; */
 	
 	/* var skills = [		// My first json code!  :D
 		{name: "HTML", endorsements: 5, endorsedBy: "Andrei I"}, 
