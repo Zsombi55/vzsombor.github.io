@@ -201,7 +201,7 @@ h3 {
     margin-top: 8px;
 	margin-bottom: 8px;
 }
-
+/*
 .footer {
     position: fixed;
     left: 0;
@@ -209,6 +209,11 @@ h3 {
     width: 100%;
     background-color: darkgray;
     margin: 5px 0 0 0 ;
-    padding: 10px 5px 5px 10px;    /*  top, right, bottom, left  */
+    padding: 10px 5px 5px 10px;    /*  top, right, bottom, left  
     text-align: center;
+}*/
+footer {
+	padding-left: 10px;
+	background-color: darkgray;
+	text-align: center;
 }
