@@ -225,24 +225,15 @@ function showSkills() {
  */
 
 // - Solution 4 , expanded with the endorsement functions -
-function showSkills(skills) {
+function showSkills(codeSkills) {
 	
-	/* var skills = [		// My first json code!  :D
-		{name: "HTML", endorsements: 5, endorsedBy: "Andrei I"}, 
-		{name: "CSS", endorsements: 1, endorsedBy: null}, 
-		{name: "JavaScript", endorsements: 9, endorsedBy: "Vasile I"}, 
-		{name: "nodeJS", endorsements: 3, endorsedBy: null}
-	]; */
-	
-	//var skills = [];
-
-	skills.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
+	codeSkills.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
 		var nameA = a.name.toLowerCase();
 		var nameB = b.name.toLowerCase();
 		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
 	});
 
-	var htmlSkills = skills.map( function (skill, index) {	// "map" transforms the data into something else.
+	var htmlSkills = codeSkills.map( function (skill, index) {	// "map" transforms the data into something else.
 		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
 		
 		var endorsements = ` <span class="endorsement">(
@@ -250,7 +241,30 @@ function showSkills(skills) {
 			${endorsedBy}
 		)</span>`;	// " `` " string template wrappers.
 		
-		return "<li>" + skills[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
+		return "<li>" + codeSkills[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
+	});
+
+	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
+	ul.innerHTML = htmlSkills.join("");
+}
+
+function showSkills(languageXps) {
+	
+	languageXps.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
+		var nameA = a.name.toLowerCase();
+		var nameB = b.name.toLowerCase();
+		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
+	});
+
+	var htmlSkills = languageXps.map( function (skill, index) {	// "map" transforms the data into something else.
+		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
+		
+		var endorsements = ` <span class="endorsement">(
+			${skill.endorsements}
+			${endorsedBy}
+		)</span>`;	// " `` " string template wrappers.
+		
+		return "<li>" + languageXps[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
@@ -261,7 +275,7 @@ function showSkills(skills) {
 /* hideAllTmPages();
 showPage("skillsPage"); */
 
-// ----- Load "skills.json"and pass here.
+// ----- Load "skills.json" & "languageXp.json" and pass here.
 console.log("1. Before loading.");
 fetch("data/skills.json")
 	.then(function(response) {
@@ -272,7 +286,18 @@ fetch("data/skills.json")
 		console.log("3. Loading skills.", skills);
 		showSkills(skills);
 	});
-console.log("4. After loading.");
+console.log("4. After loading: Skills.");
+
+fetch("data/languageXp.json")
+	.then(function(response) {
+		console.log("5. Loaded: languageXp.json");
+		return response.json();
+	})
+	.then(function(skills) {
+		console.log("6. Loading languageXp.", skills);
+		showSkills(skills);
+	});
+console.log("7. After loading: Language XP.");
 
 // ----- E-mail form. -----
 // ...
