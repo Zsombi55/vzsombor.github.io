@@ -13,12 +13,12 @@
 
 #pageContainer {
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh;  /*  100% view port height */
 }
 
 #pageMainContainer {
-    padding-bottom: 35px;
-    
+    padding-bottom: 20px;
+
 }
 
 body {
@@ -226,7 +226,7 @@ h3 {
 #footer {
     position: absolute;
     bottom: 0;
-    height: 25px;
+    height: 20px;
     width: 100%;
 	/* padding-left: 10px; */
 	background-color: darkgray;
