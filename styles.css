@@ -17,11 +17,12 @@
 }
 
 #pageMainContainer {
-    padding-bottom: 25px;
+    padding-bottom: 35px;
+    
 }
 
 body {
-    padding-bottom: 35px;
+    /* padding-bottom: 35px; */
     margin: 0;
     background-color: #cccccc;
 }
