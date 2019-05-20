@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<header>
-    <!--Top bar section, the Header of the site.-->
-    <h2 id="name-image">
-        <img src="en01 _ 255x335.jpg" alt="Beigli with mashed poppy seeds and walnuts."/>
-        <b>Varga Zsombor</b>
-    </h2>
-
-    <h3 id="summary">Current activiy: Web Developer Trainee @ <b>FastTrackIT</b></h3>
-</header>
-
 <body>
-    
+<div id="pageContainer">
+<div id="pageMainContent">
+
+	<header>
+		<!--Top bar section, the Header of the site.-->
+		<h2 id="name-image">
+			<img src="en01 _ 255x335.jpg" alt="Beigli with mashed poppy seeds and walnuts."/>
+			<b>Varga Zsombor</b>
+		</h2>
+	
+		<h3 id="summary">Current activiy: Web Developer Trainee @ <b>FastTrackIT</b></h3>
+	</header>
+	
     <div id="top-menuBar"> <!--Top Menu Bar section-->
         <ul id="menuBar">
             <li id="menuHomePage"><a href="#" data-page="homePage">Home</a></li> <!--"data-page" points to page IDs-->
@@ -31,7 +33,7 @@
             <li id="menuContactMe"><a href="#" data-page="contactPage">Contact</a></li>
         </ul>
     </div>
-
+	
     <div id="sidebar-left">
         <div id="leftBar">
             <div id="contactInfoW" class="widget"> <!--Contact information-->
@@ -149,14 +151,16 @@
 			</div>
 		</div>
     </div>
+</div> <!-- page Main Container -->
 
-	<footer class="footer">
+	<footer id="footer">
 		<a href="http://fasttrackit.org" target="_blank">FastTrackIT homepage.</a>
 	</footer>
 
     <!-- JavaScript -->
 	<div>	<script src="functions.js"></script>	</div>
 
+</div> <!-- page Container -->
 </body>
 
 </html>

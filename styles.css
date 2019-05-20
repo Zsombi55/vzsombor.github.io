@@ -11,6 +11,15 @@
         Distances (border, padding, etc.): top, right, bottom, left.
 */
 
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+
+#pageMainContainer {
+    padding-bottom: 25px;
+}
+
 body {
     padding-bottom: 35px;
     margin: 0;
@@ -201,8 +210,8 @@ h3 {
     margin-top: 8px;
 	margin-bottom: 8px;
 }
-/*
-.footer {
+
+/* footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -211,9 +220,25 @@ h3 {
     margin: 5px 0 0 0 ;
     padding: 10px 5px 5px 10px;    /*  top, right, bottom, left  
     text-align: center;
-}*/
-footer {
-	padding-left: 10px;
+} */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+    width: 100%;
+	/* padding-left: 10px; */
 	background-color: darkgray;
 	text-align: center;
 }
+
+/* footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    background-color: darkgray;
+    text-align: center;
+} */
