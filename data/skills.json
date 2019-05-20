@@ -6,10 +6,12 @@
 	{"name": "NodeJS", "endorsements": 0, "endorsedBy": null},
 	{"name": "Python", "endorsements": 2, "endorsedBy": null},
 	{"name": "IronPython (Python with .NET)", "endorsements": 2, "endorsedBy": null},
-	{"name": "Django (Python for web, used like eg. PHP)", "endorsements": 0.5, "endorsedBy": null},
+	{"name": "Django", "endorsements": 0.5, "endorsedBy": null},
 	{"name": "MSSQL", "endorsements": 0, "endorsedBy": null},
 	{"name": "PostgreSQL", "endorsements": 1, "endorsedBy": "Asoc. \"Nova 414\""},
 	{"name": "Java", "endorsements": 0, "endorsedBy": null},
+	{"name": "C", "endorsements": 0, "endorsedBy": null},
+	{"name": "C++", "endorsements": 0, "endorsedBy": null},
 	{"name": "C#", "endorsements": 5, "endorsedBy": "Asoc. \"Nova 414\", DotZ"},
 	{"name": ".NET", "endorsements": 2, "endorsedBy": "DotZ"},
 	{"name": "Lua", "endorsements": 0, "endorsedBy": null}
