@@ -225,7 +225,7 @@ function showSkills() {
  */
 
 // - Solution 4 , expanded with the endorsement functions -
-function showSkills(codeSkills) {
+function showCodeSkills(codeSkills) {
 	
 	codeSkills.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
 		var nameA = a.name.toLowerCase();
@@ -248,7 +248,7 @@ function showSkills(codeSkills) {
 	ul.innerHTML = htmlCodeSkills.join("");
 }
 
-function showSkills(languageXps) {
+function showLangSkills(languageXps) {
 	
 	languageXps.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
 		var nameA = a.name.toLowerCase();
@@ -282,9 +282,9 @@ fetch("data/skills.json")
 		console.log("2. Loaded: skills.json");
 		return response.json();
 	})
-	.then(function(skills) {
-		console.log("3. Loading skills.", skills);
-		showSkills(skills);
+	.then(function(codeSkills) {
+		console.log("3. Loading skills.", codeSkills);
+		showCodeSkills(codeSkills);
 	});
 console.log("4. After loading: Skills.");
 
@@ -293,9 +293,9 @@ fetch("data/languageXp.json")
 		console.log("5. Loaded: languageXp.json");
 		return response.json();
 	})
-	.then(function(skills) {
-		console.log("6. Loading languageXp.", skills);
-		showSkills(skills);
+	.then(function(languageXps) {
+		console.log("6. Loading languageXp.", languageXps);
+		showLangSkills(languageXps);
 	});
 console.log("7. After loading: Language XP.");
 
