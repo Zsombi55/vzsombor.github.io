@@ -279,25 +279,25 @@ showPage("skillsPage"); */
 console.log("1. Before loading.");
 fetch("data/skills.json")
 	.then(function(response) {
-		console.log("2. Loaded: skills.json");
+		console.log("4. Loaded: skills.json");
 		return response.json();
 	})
 	.then(function(codeSkills) {
 		console.log("3. Loading skills.", codeSkills);
 		showCodeSkills(codeSkills);
 	});
-console.log("4. After loading: Skills.");
+console.log("2. After loading: Skills.");
 
 fetch("data/languageXp.json")
 	.then(function(response) {
-		console.log("5. Loaded: languageXp.json");
+		console.log("7. Loaded: languageXp.json");
 		return response.json();
 	})
 	.then(function(languageXps) {
 		console.log("6. Loading languageXp.", languageXps);
 		showLangSkills(languageXps);
 	});
-console.log("7. After loading: Language XP.");
+console.log("5. After loading: Language XP.");
 
 // ----- E-mail form. -----
 // ...
