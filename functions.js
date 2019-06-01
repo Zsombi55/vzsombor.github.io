@@ -233,7 +233,7 @@ function showSkills(codeSkills) {
 		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
 	});
 
-	var htmlSkills = codeSkills.map( function (skill, index) {	// "map" transforms the data into something else.
+	var htmlCodeSkills = codeSkills.map( function (skill, index) {	// "map" transforms the data into something else.
 		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
 		
 		var endorsements = ` <span class="endorsement">(
@@ -245,7 +245,7 @@ function showSkills(codeSkills) {
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
-	ul.innerHTML = htmlSkills.join("");
+	ul.innerHTML = htmlCodeSkills.join("");
 }
 
 function showSkills(languageXps) {
@@ -256,7 +256,7 @@ function showSkills(languageXps) {
 		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
 	});
 
-	var htmlSkills = languageXps.map( function (skill, index) {	// "map" transforms the data into something else.
+	var htmlLangSkills = languageXps.map( function (skill, index) {	// "map" transforms the data into something else.
 		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
 		
 		var endorsements = ` <span class="endorsement">(
@@ -268,7 +268,7 @@ function showSkills(languageXps) {
 	});
 
 	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
-	ul.innerHTML = htmlSkills.join("");
+	ul.innerHTML = htmlLangSkills.join("");
 }
 
 // --- Start at desired page for testing purposes.
