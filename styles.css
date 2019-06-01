@@ -18,7 +18,8 @@
 
 #pageMainContent {
     padding-bottom: 20px;
-
+    overflow: hidden;
+    width: 100%;
 }
 
 body {
