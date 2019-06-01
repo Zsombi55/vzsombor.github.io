@@ -11,8 +11,8 @@ var browserCStyle = [
     , "font-weight: bold"
 ].join(';');
 
-console.log("%c Contact page: form & \"Send message\" button is not yet functional! " + 
-	"Waiting for server side e-mail form scripting lesson..", browserCStyle);
+console.log("%c The Contact page\'s messaging form & the \"Send message\" button is not yet functional! " + 
+	"...", browserCStyle);
 
 // ----- Left side bar content "collapsers". -----
 // Collapse-expand the "contactInfoW" (Contact Information) widget.
@@ -253,18 +253,18 @@ function showLangSkills(languageXps) {
 	languageXps.sort(function(a, b) {	// Sort by: 1-highest endorsement, 2-alphabet.
 		var nameA = a.name.toLowerCase();
 		var nameB = b.name.toLowerCase();
-		return nameB.endorsements - nameA.endorsements;		// decreasing order by nr.
+		return nameB.level - nameA.level;		// decreasing order by nr.
 	});
 
 	var htmlLangSkills = languageXps.map( function (skill, index) {	// "map" transforms the data into something else.
 		var endorsedBy = skill.endorsedBy ? " - " + skill.endorsedBy : "";	// like an "if-else" check.
 		
-		var endorsements = ` <span class="endorsement">(
-			${skill.endorsements}
+		var level = ` <span class="level">(
+			${skill.level}
 			${endorsedBy}
 		)</span>`;	// " `` " string template wrappers.
 		
-		return "<li>" + languageXps[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
+		return "<li>" + languageXps[index].name + level + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
 	var ul = document.querySelector("#languagePage ul");	// referencing an HTML element with its ID, and a tag within that.

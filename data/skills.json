@@ -1,17 +1,17 @@
 [
-    {"name": "HTML", "endorsements": 3, "endorsedBy": "Andrei I"},
+    {"name": "HTML", "endorsements": 3, "endorsedBy": "Andrei I."},
 	{"name": "CSS", "endorsements": 1, "endorsedBy": null},
-	{"name": "JavaScript", "endorsements": 5, "endorsedBy": "Vasile I"},
+	{"name": "JavaScript", "endorsements": 4, "endorsedBy": "Vasile I."},
 	{"name": "NodeJS", "endorsements": 0, "endorsedBy": null},
 	{"name": "Python", "endorsements": 2, "endorsedBy": null},
 	{"name": "IronPython (Python with .NET)", "endorsements": 2, "endorsedBy": null},
 	{"name": "Django", "endorsements": 0.5, "endorsedBy": null},
-	{"name": "MSSQL", "endorsements": 0, "endorsedBy": null},
-	{"name": "PostgreSQL", "endorsements": 1, "endorsedBy": "Asoc. \"Nova 414\""},
+	{"name": "MSSQL", "endorsements": 1, "endorsedBy": null},
+	{"name": "PostgreSQL", "endorsements": 2, "endorsedBy": "Asoc. \"Nova 414\" (RO)"},
 	{"name": "Java", "endorsements": 0, "endorsedBy": null},
 	{"name": "C", "endorsements": 0, "endorsedBy": null},
 	{"name": "C++", "endorsements": 0, "endorsedBy": null},
-	{"name": "C#", "endorsements": 5, "endorsedBy": "Asoc. \"Nova 414\", DotZ"},
-	{"name": ".NET", "endorsements": 2, "endorsedBy": "DotZ"},
+	{"name": "C#", "endorsements": 5, "endorsedBy": "Asoc. \"Nova 414\" (RO), DotZ (DK)"},
+	{"name": ".NET", "endorsements": 2, "endorsedBy": "DotZ (DK)"},
 	{"name": "Lua", "endorsements": 0, "endorsedBy": null}
 ]
