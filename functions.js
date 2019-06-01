@@ -267,7 +267,7 @@ function showLangSkills(languageXps) {
 		return "<li>" + languageXps[index].name + endorsements + "</li>";	// without ".toUpperCase()" .. be punctual !!
 	});
 
-	var ul = document.querySelector("#codingPage ul");	// referencing an HTML element with its ID, and a tag within that.
+	var ul = document.querySelector("#languagePage ul");	// referencing an HTML element with its ID, and a tag within that.
 	ul.innerHTML = htmlLangSkills.join("");
 }
 
