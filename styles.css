@@ -225,7 +225,7 @@ h3 {
 
 #footer {
     position: absolute;
-    bottom: 0;
+    bottom: 30;
     height: 20px;
     width: 100%;
 	/* padding-left: 10px; */
